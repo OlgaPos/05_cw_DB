@@ -7,10 +7,10 @@ from utils import create_employers_list, create_database, save_data_to_database,
 def main():
     # Создаём список работодателей из json-файла работодателей
     employers_list = create_employers_list("employers.json")
-    print(employers_list)
+    # print(employers_list)
 
     # Запрашивает у пользователя ключевое слово, по которому будет производиться поиск.
-    keyword = input('Введите ключевое слово для поиска вакансий: \n')
+    keyword = input('Здравствуйте! Введите ключевое слово для поиска вакансий: \n')
 
     hh = HeadHunter()
     hh_data = hh.get_request(keyword)
@@ -18,7 +18,7 @@ def main():
     selected_vacancies = hh.select_vacancies(employers_list, hh_data)
     # print(selected_vacancies)
     short_vacancies = hh.get_short_vacancies(selected_vacancies)
-    print(short_vacancies)
+    # print(short_vacancies)
 
     params = config()
 

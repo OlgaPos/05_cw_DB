@@ -86,6 +86,6 @@ def save_data_to_database(data: List[Dict[str, Any]], database_name: str, params
                 (i["vacancy_id"], i["position"], i["requirements"], i["position_description"], i["city"],
                  i["salary_from"], i["currency"], i["employer_name"], i["employer_id"], i["url"])
             )
-    print(employers_list)
+    # print(employers_list)
     conn.commit()
     conn.close()
